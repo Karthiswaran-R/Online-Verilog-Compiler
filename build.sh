@@ -1,9 +1,7 @@
 #!/bin/bash
 
-# Install Python 3 and pip if not already installed
-echo "Installing Python and pip..."
-apt-get update
-apt-get install -y python3 python3-pip
-
-# Install dependencies from requirements.txt
+# Install Python dependencies using pip
 pip3 install -r requirements.txt
+
+# You can also add other setup steps here
+echo "Installation completed successfully."
