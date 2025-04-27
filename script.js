@@ -117,7 +117,7 @@ document.getElementById("runBtn").onclick = async function () {
   document.getElementById("output").innerText = "⏳ Compiling and simulating...";
 
   try {
-    const response = await fetch("http://localhost:5000/run", {
+    const response = await fetch("https://online-verilog-compiler.onrender.com", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ code })
@@ -144,7 +144,7 @@ document.getElementById("runBtn").onclick = async function () {
 // Server check
 async function checkServerStatus() {
   try {
-    const res = await fetch("http://localhost:5000");
+    const res = await fetch("https://online-verilog-compiler.onrender.com");
     if (!res.ok) throw new Error("Unreachable");
     console.log("Backend reachable");
   } catch (e) {
